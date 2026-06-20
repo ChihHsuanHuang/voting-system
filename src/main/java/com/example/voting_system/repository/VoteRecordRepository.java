@@ -11,7 +11,7 @@ public interface VoteRecordRepository
     long countByVoteItemId(Long voteItemId);
 
     void deleteByVoteItemId(Long voteItemId);
-
+    // 呼叫 Stored Procedure 
     @Procedure(procedureName = "AddVoteRecord")
     void AddVoteRecord(
             String p_voter_name,

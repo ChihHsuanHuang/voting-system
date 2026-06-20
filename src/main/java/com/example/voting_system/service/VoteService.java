@@ -25,10 +25,10 @@ public class VoteService {
         this.itemRepo = itemRepo;
         this.recordRepo = recordRepo;
     }
+    // 查詢投票項目
     public List<Map<String, Object>> getItems() {
 
         List<Map<String, Object>> result = new ArrayList<>();
-
         for (VoteItem item : itemRepo.findAll()) {
 
             Map<String, Object> map = new HashMap<>();
@@ -46,7 +46,7 @@ public class VoteService {
         return result;
     }
 
-
+    // 新增項目
     public VoteItem addItem(String name) {
 
         itemRepo.AddVoteItem(name);
@@ -54,7 +54,7 @@ public class VoteService {
         return null;
     }
 
-    
+    // 新增紀錄
     @Transactional
     public VoteRecord vote(
             String voterName,
@@ -67,7 +67,7 @@ public class VoteService {
 
         return null;
     }
-
+    // 刪除項目
     @Transactional
     public void deleteItem(Long id) {
 
