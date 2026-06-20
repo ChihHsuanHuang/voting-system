@@ -26,7 +26,7 @@ CREATE TABLE `vote_item` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -35,7 +35,7 @@ CREATE TABLE `vote_item` (
 
 LOCK TABLES `vote_item` WRITE;
 /*!40000 ALTER TABLE `vote_item` DISABLE KEYS */;
-INSERT INTO `vote_item` VALUES (1,'電腦'),(2,'滑鼠'),(8,'電腦');
+INSERT INTO `vote_item` VALUES (8,'電腦'),(9,'電視機'),(10,'手機'),(11,'天線');
 /*!40000 ALTER TABLE `vote_item` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-06-20 19:15:58
+-- Dump completed on 2026-06-20 22:12:21

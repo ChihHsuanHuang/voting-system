@@ -2,7 +2,7 @@ package com.example.voting_system.service;
 
 import java.util.*;
 
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,12 +14,17 @@ import com.example.voting_system.repository.VoteRecordRepository;
 @Service
 public class VoteService {
 
-    @Autowired
-    private VoteItemRepository itemRepo;
+    private final VoteItemRepository itemRepo;
 
-    @Autowired
-    private VoteRecordRepository recordRepo;
+    private final VoteRecordRepository recordRepo;
 
+    public VoteService(
+            VoteItemRepository itemRepo,
+            VoteRecordRepository recordRepo) {
+
+        this.itemRepo = itemRepo;
+        this.recordRepo = recordRepo;
+    }
     public List<Map<String, Object>> getItems() {
 
         List<Map<String, Object>> result = new ArrayList<>();
@@ -41,32 +46,33 @@ public class VoteService {
         return result;
     }
 
+
     public VoteItem addItem(String name) {
 
-        VoteItem item = new VoteItem();
+        itemRepo.AddVoteItem(name);
 
-        item.setName(name);
-
-        return itemRepo.save(item);
+        return null;
     }
 
+    
     @Transactional
     public VoteRecord vote(
             String voterName,
             Long voteItemId) {
 
-        VoteRecord record = new VoteRecord();
+        recordRepo.AddVoteRecord(
+                voterName,
+                voteItemId
+        );
 
-        record.setVoterName(voterName);
-        record.setVoteItemId(voteItemId);
-
-        return recordRepo.save(record);
+        return null;
     }
+
     @Transactional
     public void deleteItem(Long id) {
 
         recordRepo.deleteByVoteItemId(id);
 
         itemRepo.deleteById(id);
-}   
+    }
 }

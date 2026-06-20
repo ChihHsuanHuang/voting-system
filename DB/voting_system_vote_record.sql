@@ -27,7 +27,7 @@ CREATE TABLE `vote_record` (
   `vote_item_id` bigint DEFAULT NULL,
   `voter_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=73 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +36,7 @@ CREATE TABLE `vote_record` (
 
 LOCK TABLES `vote_record` WRITE;
 /*!40000 ALTER TABLE `vote_record` DISABLE KEYS */;
-INSERT INTO `vote_record` VALUES (47,8,'Sandy'),(48,8,'Sandy'),(49,8,'Sandy'),(50,1,'Leo'),(51,1,'Sandy'),(52,2,'Sandy'),(53,2,'Randy'),(54,2,'RSY');
+INSERT INTO `vote_record` VALUES (47,8,'Sandy'),(48,8,'Sandy'),(49,8,'Sandy'),(56,9,'Jimmy'),(57,9,'Jimmy'),(58,9,'Jimmy'),(59,9,'Jimmy'),(62,10,'JB'),(63,10,'JB'),(64,8,'JB'),(65,8,'JB'),(69,8,'Jame'),(70,8,'Jame'),(71,11,'Jame'),(72,11,'Jame');
 /*!40000 ALTER TABLE `vote_record` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-06-20 19:15:57
+-- Dump completed on 2026-06-20 22:12:19
